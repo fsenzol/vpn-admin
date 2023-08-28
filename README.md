@@ -1,6 +1,6 @@
 
 
-# ☁️ *@DecrytorId PROJECT™ version 0.01* ☁️
+# ☁️ *@FSENZOL version 0.01* ☁️
 
 Project Fog is a VPS AutoScript for Ubuntu and Debian Distros. Comes with pre-installed tunneling software. See below for a list of pre-installed programs.
 [![Korn|Fog](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/Kornsolid) 
