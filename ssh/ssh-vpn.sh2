@@ -12,34 +12,21 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://DecrytorId/allow | grep $MYIP )
-echo "Memeriksa Hak Akses VPS..."
-if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
-else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
-exit 0
-fi
 clear
 echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/ssh"
+bzvpn="raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/ssh"
 
 # Link Hosting Kalian Untuk Xray
-bzvpnn="raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/xray"
+bzvpnn="raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-bzvpnnn="raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/trojango"
+bzvpnnn="raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-bzvpnnnn="raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/stunnel5"
+bzvpnnnn="raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -50,13 +37,13 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Indonesia
-organization=ridwanstorevpn
-organizationalunit=ridwanstorevpn
-commonname=ridwanstorevpn
-email=bzssh21@gmail.com
+country=CM
+state=SW
+locality=Cameroon
+organization=SenX
+organizationalunit=senxvpn
+commonname=fsenzol
+email=faithsenz12@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${bzvpn}/password"
@@ -406,7 +393,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://${bzvpn}/addhost.sh"
 wget -O about "https://${bzvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/menu.sh"
 wget -O addssh "https://${bzvpn}/addssh.sh"
 wget -O trialssh "https://${bzvpn}/trialssh.sh"
 wget -O delssh "https://${bzvpn}/delssh.sh"
@@ -449,22 +436,22 @@ wget -O addtrgo "https://${bzvpnnn}/addtrgo.sh"
 wget -O deltrgo "https://${bzvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${bzvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${bzvpnnn}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/websocket/portsshws.sh"
+wget -O portsshnontls "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/websocket/portsshws.sh"
 
-wget -O sshovpnmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/sshovpn.sh"
-wget -O l2tpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/l2tpmenu.sh"
-wget -O pptpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/pptpmenu.sh"
-wget -O sstpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/sstpmenu.sh"
-wget -O wgmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/wgmenu.sh"
-wget -O ssmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/ssmenu.sh"
-wget -O ssrmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/ssrmenu.sh"
-wget -O vmessmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/vmessmenu.sh"
-wget -O vlessmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/vlessmenu.sh"
-wget -O trmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/trmenu.sh"
-wget -O trgomenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/trgomenu.sh"
-wget -O setmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/setmenu.sh"
-wget -O running "https://raw.githubusercontent.com/Kmk101team/kmkz/decrytorId/update/running.sh"
+wget -O sshovpnmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/ssrmenu.sh"
+wget -O vmessmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/vmessmenu.sh"
+wget -O vlessmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/vlessmenu.sh"
+wget -O trmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/trgomenu.sh"
+wget -O setmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/setmenu.sh"
+wget -O running "https://raw.githubusercontent.com/fsenzol/vpn-admin/decrytorId/update/running.sh"
 wget -O cekxray "https://raw.githubusercontent.com/myridwan/src/ipuk/cekxray.sh"
 
 chmod +x portsshnontls

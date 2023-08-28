@@ -20,7 +20,7 @@ clear
 # By AnuyBazoelk
 # ==================================================
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/ssh"
+bzvpn="raw.githubusercontent.com/fsenzol/vpn-admin/main/ssh"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive

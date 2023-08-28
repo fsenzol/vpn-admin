@@ -18,16 +18,16 @@ echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/ssh"
+bzvpn="raw.githubusercontent.com/fsenzol/vpn-admin/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-bzvpnn="raw.githubusercontent.com/Kmk101team/kmkz/main/xray"
+bzvpnn="raw.githubusercontent.com/fsenzol/vpn-admin/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-bzvpnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/trojango"
+bzvpnnn="raw.githubusercontent.com/fsenzol/vpn-admin/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-bzvpnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/stunnel5"
+bzvpnnnn="raw.githubusercontent.com/fsenzol/vpn-admin/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -394,7 +394,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://${bzvpn}/addhost.sh"
 wget -O about "https://${bzvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/menu.sh"
 wget -O addssh "https://${bzvpn}/addssh.sh"
 wget -O trialssh "https://${bzvpn}/trialssh.sh"
 wget -O delssh "https://${bzvpn}/delssh.sh"
@@ -437,22 +437,22 @@ wget -O addtrgo "https://${bzvpnnn}/addtrgo.sh"
 wget -O deltrgo "https://${bzvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${bzvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${bzvpnnn}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/Kmk101team/kmkz/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/Kmk101team/kmkz/main/websocket/portsshws.sh"
+wget -O portsshnontls "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/websocket/portsshws.sh"
 
-wget -O sshovpnmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/sshovpn.sh"
-wget -O l2tpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/l2tpmenu.sh"
-wget -O pptpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/pptpmenu.sh"
-wget -O sstpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/sstpmenu.sh"
-wget -O wgmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/wgmenu.sh"
-wget -O ssmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/ssmenu.sh"
-wget -O ssrmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/ssrmenu.sh"
-wget -O vmessmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/vmessmenu.sh"
-wget -O vlessmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/vlessmenu.sh"
-wget -O trmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/trmenu.sh"
-wget -O trgomenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/trgomenu.sh"
-wget -O setmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/setmenu.sh"
-wget -O running "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/running.sh"
+wget -O sshovpnmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/ssrmenu.sh"
+wget -O vmessmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/vmessmenu.sh"
+wget -O vlessmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/vlessmenu.sh"
+wget -O trmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/trgomenu.sh"
+wget -O setmenu "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/setmenu.sh"
+wget -O running "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/update/running.sh"
 wget -O cekxray "https://raw.githubusercontent.com/myridwan/src/ipuk/cekxray.sh"
 
 chmod +x portsshnontls

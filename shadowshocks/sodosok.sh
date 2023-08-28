@@ -19,7 +19,7 @@ clear
 echo "Checking VPS"
 clear
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/shadowsocks"
+bzvpn="raw.githubusercontent.com/fsenzol/vpn-admin/main/shadowsocks"
 
 source /etc/os-release
 OS=$ID
