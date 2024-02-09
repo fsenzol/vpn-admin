@@ -184,16 +184,6 @@ Server Information & Other Features
  
  
  #### _The following people or organizations deserve credit for Project Fog._ _[ See: [Credits](docs/credits.md) ]_
- 
- #
- ## _Author_
-
-_If you have any feedback, please reach me out:_
-- _https://t.me/anuybazoelk_
-
-
-
-  <p align="center"> <img src="https://user-images.githubusercontent.com/28264813/241795159-c294faa4-b0d6-43b3-82c4-3ba35db23823.gif" width="200" height="180" /> </p>
   
  
  
