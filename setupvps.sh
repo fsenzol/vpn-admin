@@ -7,7 +7,7 @@ PROXYURL="https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/Mo
 FILENAME=$(basename "$0")
 
 function setup() {
-    apt install gcc g++ clang nano nvim lua5.3 screen make cmake -y
+    apt update &&  apt install gcc g++ clang nano neovim lua5.3 screen -y
     clear
 }
 
@@ -16,8 +16,8 @@ function installPY() {
     if [ -f "$PY" ]; then
         tar -xvf "$PY"
         cd "$PYFOLDER" || exit
-        ./configure && make install
-        cd ~/
+        ./configure
+        make && make install
         clear
     else
         echo "Python Not Found!"
@@ -41,20 +41,22 @@ function installTCP() {
         echo "Installing Proxy...!"
         sleep 2
         pON=$(lsof -t -i :8080)
-        if [ -n "$pON" ]; then
+
+        if [ -z "$pON" ]; then
             clear
             echo "Proxy Detected! LOL BRO"
             sleep 2
             exit 1
         fi
-    else
+
         mkdir /etc/basedcat/
         sed -i 's/^MSG='\'''\''/MSG="Captain BaseDCaTx"/' 'proxy.py'
-        mv proxy.py /etc/basedcat/
+        mv ~/proxy.py /etc/basedcat/
         clear
         echo "Installations Done!"
         bash /etc/basedcat/proxy.py 8080 &
         clear
+
         if ! lsof -t -i :8080 > /dev/null; then
             echo -e "Proxy started on port: 8080"
         else
@@ -62,6 +64,10 @@ function installTCP() {
         fi
         sleep 3
         clear
+    else
+        clear
+        echo "Proxy Not Found!" 
+        sleep 2
     fi
 }
 
@@ -81,11 +87,9 @@ function launchKeep() {
         clear
     fi
     screen -S keep
-    mkdir /etc/basedcat/
     cd /etc/basedcat/ || exit
     chmod +x keepalive.sh
     bash keepalive.sh &
-    cd ~/
 }
 
 function start() {
@@ -102,7 +106,7 @@ function start() {
             continue
         fi
 
-        if [[ "$num" -lt 1 || "$num" -gt 4 ]]; then
+        if [[ "$num" -lt 1 || "$num" -gt 3 ]]; then
             clear
             echo "Input out of range....! \n"
             sleep 1
