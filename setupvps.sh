@@ -17,7 +17,8 @@ function installPY() {
         tar -xvf "$PY"
         cd "$PYFOLDER" || exit
         ./configure
-        make && make install
+        make install
+        cd ~/
         clear
     else
         echo "Python Not Found!"
@@ -81,9 +82,11 @@ function launchKeep() {
         clear
     fi
     screen -S keep
+    mkdir /etc/basedcat/
     cd /etc/basedcat/ || exit
     chmod +x keepalive.sh
     bash keepalive.sh &
+    cd ~/
 }
 
 function start() {
