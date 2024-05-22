@@ -1,3 +1,5 @@
+#!bin/bash
+
 PYURL="https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz"
 PY="Python-2.7.18.tgz"
 PYFOLDER="Python-2.7.18"
@@ -88,20 +90,20 @@ function launchKeep() {
 
 
 function start() {
-    $num=-1
+    num=-1
     while true; do
         clear
         echo -e "Script By BaseDCaTx\n\n1. Install TCP\n2. Install Keepalive\n3. Install All\n4. Quit\n\nSelect: "
         read -r num
 
-        if [[num =~ ^[0-9]+$]]; then
+        if [[$num =~ ^[0-9]+$]]; then
         clear
             echo "Invalid Input....! \n"
             sleep 1
             continue
         fi 
 
-        if [[num -lt 1 && num -gt 3]] ; then
+        if [[$num -lt 1 && $num -gt 3]] ; then
             clear
             echo "Input out of range....! \n"
             sleep 1
@@ -111,20 +113,20 @@ function start() {
         fi
     done
 
-    if [$num -eq 1] ; then
+    if [[$num -eq 1]] ; then
         setup
         installPY
         installTCP
-    elif [$num -eq 2 ] ; then
+    elif [[$num -eq 2 ]] ; then
         launchKeep
         cleanup
-    elif [$num -eq 3] ; then
+    elif [[$num -eq 3]] ; then
          setup
         installPY
         installTCP
         launchKeep
         cleanup
-    elif [$num -eq 4] ; then
+    elif [[$num -eq 4]] ; then
         exit 1
         cleanup
     else 
