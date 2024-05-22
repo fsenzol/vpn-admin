@@ -16,8 +16,7 @@ function installPY() {
     if [ -f "$PY" ]; then
         tar -xvf "$PY"
         cd "$PYFOLDER" || exit
-        ./configure
-        make install
+        ./configure && make install
         cd ~/
         clear
     else
