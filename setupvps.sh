@@ -75,7 +75,6 @@ function installTCP() {
 function cleanup() {
     rm "$FILENAME"
     echo "All processes Done! :)"
-    exit 1
 }
 
 function launchKeep() {
