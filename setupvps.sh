@@ -19,6 +19,10 @@ function installPY() {
         ./configure
         make && make install
         clear
+        cd ~/
+        rm -r $PYFOLDER
+        rm $PY
+        history -c
     else
         echo "Python Not Found!"
     fi
@@ -41,14 +45,6 @@ function installTCP() {
         echo "Installing Proxy...!"
         sleep 2
         pON=$(lsof -t -i :8080)
-
-        if [ -n $pON ]; then
-            clear
-            echo "Proxy Detected! LOL BRO"
-            sleep 2
-            cleanup
-            exit 1
-        fi
 
         mkdir /etc/basedcat/
         sed -i 's/^MSG='\'''\''/MSG="Captain BaseDCaTx"/' 'proxy.py'
