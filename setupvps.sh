@@ -8,7 +8,6 @@ FILENAME=$(basename "$0")
 
 function setup() {
     apt update &&  apt install gcc g++ clang nano neovim lua5.3 screen -y
-    cleanup
     clear
 }
 
@@ -108,7 +107,7 @@ function start() {
             continue
         fi
 
-        if [[ "$num" -lt 1 || "$num" -gt 3 ]]; then
+        if [[ "$num" -lt 1 || "$num" -gt 4 ]]; then
             clear
             echo "Input out of range....! \n"
             sleep 1
@@ -132,8 +131,8 @@ function start() {
         launchKeep
         cleanup
     elif [ "$num" -eq 4 ]; then
-        exit 1
         cleanup
+        exit 1
     else
         echo " LoL Bro! "
         exit 1
