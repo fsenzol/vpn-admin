@@ -42,7 +42,7 @@ function installTCP() {
         sleep 2
         pON=$(lsof -t -i :8080)
 
-        if [ -z "$pON" ]; then
+        if [ -n "$pON" ]; then
             clear
             echo "Proxy Detected! LOL BRO"
             sleep 2
