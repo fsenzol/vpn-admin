@@ -7,7 +7,7 @@ PROXYURL="https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/Mo
 FILENAME=$(basename "$0")
 
 function setup() {
-    apt install gcc g++ clang nano nvim lua5.3 screen -y
+    apt install gcc g++ clang nano nvim lua5.3 screen make cmake -y
     clear
 }
 
