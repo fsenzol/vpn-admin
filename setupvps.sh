@@ -8,6 +8,7 @@ FILENAME=$(basename "$0")
 
 function setup() {
     apt update &&  apt install gcc g++ clang nano neovim lua5.3 screen -y
+    cleanup
     clear
 }
 
@@ -42,10 +43,11 @@ function installTCP() {
         sleep 2
         pON=$(lsof -t -i :8080)
 
-        if [ -n "$pON" ]; then
+        if [ -n $pON ]; then
             clear
             echo "Proxy Detected! LOL BRO"
             sleep 2
+            cleanup
             exit 1
         fi
 
