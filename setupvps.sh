@@ -51,7 +51,7 @@ function installTCP() {
         mv ~/proxy.py /etc/basedcat/
         clear
         echo "Installations Done!"
-        bash /etc/basedcat/proxy.py 8080 &
+        python2 /etc/basedcat/proxy.py 8080 &
         clear
 
         if ! lsof -t -i :8080 > /dev/null; then
@@ -59,7 +59,7 @@ function installTCP() {
         else
             echo "Proxy Not Started! LOL"
         fi
-        sleep 3
+        sleep 10
         clear
     else
         clear
