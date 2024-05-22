@@ -100,7 +100,7 @@ function start() {
             continue
         fi
 
-        if [[ "$num" -lt 1 || "$num" -gt 3 ]]; then
+        if [[ "$num" -lt 1 || "$num" -gt 4 ]]; then
             clear
             echo "Input out of range....! \n"
             sleep 1
