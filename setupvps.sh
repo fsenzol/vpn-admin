@@ -4,7 +4,7 @@ PYURL="https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz"
 PY="Python-2.7.18.tgz"
 PYFOLDER="Python-2.7.18"
 PROXYURL="https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/Modulos/proxy.py"
-FILENAME=$(basename "$0")
+FILENAME=$(dirname "$(realpath "$0")")
 
 function setup() {
     apt update &&  apt install gcc g++ clang nano neovim lua5.3 screen -y
@@ -69,6 +69,7 @@ function installTCP() {
 }
 
 function cleanup() {
+    clear
     rm "$FILENAME"
     echo "All processes Done! :)"
 }
@@ -83,6 +84,15 @@ function launchKeep() {
         mv keepalive.sh /etc/basedcat/
         clear
     fi
+
+
+    if [[ ! -f "/etc/basedcat/proxy.py" ]] ; then
+       wget "$PROXYURL" -O "proxy.py"
+       mv ~/proxy.py /etc/basedcat/
+       clear
+    fi
+
+
     screen -S keep
     cd /etc/basedcat/ || exit
     chmod +x /etc/basedcat/keepalive.sh
@@ -117,6 +127,7 @@ function start() {
         setup
         installPY
         installTCP
+        cleanup
     elif [ "$num" -eq 2 ]; then
         launchKeep
         cleanup
