@@ -5,7 +5,7 @@ function keepalive() {
     while true; do
         killProxy
         python2 proxy.py 8080
-        sleep 300
+        sleep 60
     done
 }
 
