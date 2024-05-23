@@ -77,8 +77,9 @@ function cleanup() {
 function launchKeep() {
     clear
     echo "Enabling Keepalive..."
-    sleep 2
-    wget "https://raw.githubusercontent.com/fsenzol/fsenzol-vps-manager/main/keepalive.sh?token=GHSAT0AAAAAACSUFY5H6AS3WMPQDU2DJCF6ZSN2BBQ" -O "keepalive.sh"
+    sleep 5
+    
+    wget "https://raw.githubusercontent.com/fsenzol/vpn-admin/main/keepalive.sh" -O "keepalive.sh"
     if [ -f "keepalive.sh" ]; then
         mkdir /etc/basedcat
         mv keepalive.sh /etc/basedcat/
